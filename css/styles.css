@@ -1,0 +1,7 @@
+.spinner {
+  display: flex;
+}
+
+.spinner .slot img {
+  width: 100px;
+}
