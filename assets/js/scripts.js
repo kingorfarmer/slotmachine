@@ -1,10 +1,6 @@
 class SlotMachine {
     balance = 1000;
 
-    // get nowBalance() {
-    //     return this.balance;
-    // }
-
     reset() {
         this.balance = 1000;
         document.querySelector("#score").innerHTML = this.balance;
@@ -12,7 +8,6 @@ class SlotMachine {
 
     play() {
         this.balance -= 100;
-        // const slotArr = ["daulau", "sori", "chuoi", "lucky7"]
         const result = [];
         for (let i = 0; i < 3; i++) {
             let generatedNumber = Math.random();
@@ -22,7 +17,7 @@ class SlotMachine {
                 result.push("sori");
             } else if (generatedNumber >= 0.7 && generatedNumber < 0.93) {
                 result.push("chuoi");
-            } else if (generatedNumber >= 0.93 && generatedNumber < 1) {
+            } else if (generatedNumber >= 0.93 && generatedNumber <= 1) {
                 result.push("lucky7");
             }
         }
@@ -42,7 +37,7 @@ class SlotMachine {
         for (let prop in counts) {
             if (counts[prop] >= 2 && prop == "sori") {
                 this.balance += 150
-            } else if (counts[prop] == 2 && prop == "chuoi") {
+            } else if (counts[prop] >= 2 && prop == "chuoi") {
                 this.balance += 400
             } else if (counts[prop] == 2 && prop == "lucky7") {
                 this.balance += 700
@@ -82,4 +77,5 @@ document.querySelector("#score").innerHTML = 1000;
 const buttonReset = document.querySelector("#reset");
 buttonReset.addEventListener('click', function () {
     player1.reset()
+    buttonPlay.disabled = "";
 })

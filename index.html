@@ -6,26 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Otomanopee One' rel='stylesheet'>
 </head>
 
 <body>
-    <div id="score"></div>
-    <div id="result"></div>
-    <div id="spinner" class="spinner">
-        <div id="slot1" class="slot">
-            <img src="./assets/svg/lucky7.svg" alt="">
+    <div class="wrapper">
+
+        <div class="score-board"><span id="score" class="score-text"></span></div>
+
+        <div class="slot-machine">
+            <div class="center-div">
+                <div class="slot-wrapper">
+                    <div id="spinner" class="spinner">
+                        <div id="slot1" class="slot">
+                            <img src="./assets/svg/lucky7.svg" alt="">
+                        </div>
+                        <div id="slot2" class="slot">
+                            <img src="./assets/svg/lucky7.svg" alt="">
+                        </div>
+                        <div id="slot3" class="slot">
+                            <img src="./assets/svg/lucky7.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="slot2" class="slot">
-            <img src="./assets/svg/lucky7.svg" alt="">
+
+        <div class="slot-button">
+            <button id="reset" class="button-reset">Reset</button>
+            <button id="play" class="button-play">Play</button>
         </div>
-        <div id="slot3" class="slot">
-            <img src="./assets/svg/lucky7.svg" alt="">
-        </div>
+
     </div>
-    <button id="reset">reset</button>
-    <button id="play">choi de</button>
-    <script src="./js/scripts.js"></script>
+    <script src="./assets/js/scripts.js"></script>
 </body>
 
 </html>
